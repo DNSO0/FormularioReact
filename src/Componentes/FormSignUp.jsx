@@ -5,7 +5,7 @@ import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-function FormSignUp() {
+function FormSignUp({ handleSubmit }) {   
   const [name, setName] = useState("");
   const [lastName, setLasName] = useState("");
   const [email, setEmail] = useState("");
@@ -16,7 +16,7 @@ function FormSignUp() {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        console.log({
+        handleSubmit({
           name,
           lastName,
           email,
